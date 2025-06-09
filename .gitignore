@@ -1,0 +1,25 @@
+[Ll]ibrary/
+[Tt]emp/
+[Bb]uild/
+[Bb]uilds/
+obj/
+[Mm]emoryCaptures/
+
+# Auto-generated VS/VSCode files
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.suo
+
+# Unity cache
+*.pidb
+*.booproj
+*.svd
+
+# OS/Editor
+.DS_Store
+*.swp
+*.tmp
+*.bak
