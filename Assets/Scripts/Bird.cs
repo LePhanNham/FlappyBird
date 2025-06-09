@@ -30,12 +30,18 @@ public class Bird : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        // Replace keyboard input with touch input
+        if (Input.touchCount > 0)
         {
-            SoundController.instance.PlayThisSound("wing", 0.5f);
-            ready.SetActive(false);
-            Rigidbody.gravityScale = 8;
-            BirdMoveUp();
+            Touch touch = Input.GetTouch(0);
+            
+            if (touch.phase == TouchPhase.Began)
+            {
+                SoundController.instance.PlayThisSound("wing", 0.5f);
+                ready.SetActive(false);
+                Rigidbody.gravityScale = 8;
+                BirdMoveUp();
+            }
         }
 
     }
@@ -66,12 +72,12 @@ public class Bird : MonoBehaviour
     {
         gameOver.SetActive(true);
         Time.timeScale = 0;
-        currentScore.text = "Current Score : " + Diem.ToString();
+        currentScore.text = Diem.ToString();
         if (Diem>HighScore)
         {
             HighScore = Diem;
         }
-        highScore.text = "High Score : " + HighScore.ToString();
+        highScore.text = HighScore.ToString();
         Diem = 0;
         score.text = "0";
         reset.gameObject.SetActive(true);

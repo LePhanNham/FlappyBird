@@ -35,7 +35,7 @@ public class PineGenerature : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.touchCount > 0)
         {
             check = true;
         }
