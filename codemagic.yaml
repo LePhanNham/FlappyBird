@@ -6,11 +6,11 @@ workflows:
 
     environment:
       vars:
-        UNITY_VERSION: "2022.3.14f1"
+        UNITY_VERSION: "2022.3.29f1"
         PROJECT_PATH: "."
         BUILD_PATH: "build/ios"
 
-      unity: "2022.3.14f1"
+      unity: "2022.3.29f1"
 
       groups:
         - unity_credentials
