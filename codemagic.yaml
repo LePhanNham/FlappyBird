@@ -10,8 +10,7 @@ workflows:
         PROJECT_PATH: "."
         BUILD_PATH: "build/ios"
 
-      unity:
-        version: "2022.3.14f1"
+      unity: "2022.3.14f1"
 
       groups:
         - unity_credentials
